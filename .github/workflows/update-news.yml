@@ -64,7 +64,15 @@ jobs:
             python scripts/update_news.py --output-dir data --window-hours 24 --archive-days 21
           fi
 
-      - name: Commit and push changes
+      - name: Upload artifacts (GitHub Actions run - data available as workflow artifacts)
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-news-snapshot
+          path: data/latest-24h.json data/waytoagi-7d.json data/source-status.json
+          retention-days: 1
+
+      - name: Commit and push changes (requires repo-level PAT with contents:write)
+        if: false  # Disabled: Fine-Grained PAT lacks contents:write. Data available via artifacts.
         env:
           EMAIL_DIGEST_PUBLISH: ${{ secrets.EMAIL_DIGEST_PUBLISH || vars.EMAIL_DIGEST_PUBLISH }}
         run: |

@@ -32,19 +32,13 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Prepare OPML
-        env:
-          FOLLOW_OPML_B64: ${{ secrets.FOLLOW_OPML_B64 }}
+      - name: Prepare OPML (public follow.opml committed to repo)
         run: |
           mkdir -p feeds
-          if [ -n "$FOLLOW_OPML_B64" ]; then
-            echo "$FOLLOW_OPML_B64" | base64 --decode > feeds/follow.opml
-            echo "Loaded feeds/follow.opml from FOLLOW_OPML_B64 secret"
-          elif [ -f feeds/follow.example.opml ]; then
-            cp feeds/follow.example.opml feeds/follow.opml
-            echo "Loaded public demo OPML from feeds/follow.example.opml"
+          if [ -f feeds/follow.opml ]; then
+            echo "Using committed feeds/follow.opml ($(wc -l < feeds/follow.opml) lines)"
           else
-            echo "No OPML file available; RSS OPML is optional"
+            echo "WARNING: follow.opml not found, using built-in sources only"
           fi
 
       - name: Update data
@@ -62,7 +56,7 @@ jobs:
           X_API_DAILY_POST_LIMIT: ${{ vars.X_API_DAILY_POST_LIMIT }}
           X_API_RUN_UTC_HOUR: ${{ vars.X_API_RUN_UTC_HOUR }}
           X_API_RUN_UTC_MINUTE_MAX: ${{ vars.X_API_RUN_UTC_MINUTE_MAX }}
-          RSS_MAX_FEEDS: ${{ vars.RSS_MAX_FEEDS || 10 }}
+          RSS_MAX_FEEDS: ${{ vars.RSS_MAX_FEEDS || 50 }}
         run: |
           if [ -f feeds/follow.opml ]; then
             python scripts/update_news.py --output-dir data --window-hours 24 --archive-days 21 --rss-opml feeds/follow.opml --rss-max-feeds "${RSS_MAX_FEEDS:-10}"

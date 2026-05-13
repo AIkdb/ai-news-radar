@@ -18,8 +18,7 @@ __pycache__/
 .venv/
 venv/
 
-# Private source inputs
-feeds/follow.opml
+# Private source inputs (follow.opml is now public - no secrets needed)
 feeds/*.private.opml
 feeds/private*.opml
 

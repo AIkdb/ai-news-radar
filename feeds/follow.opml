@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+  <head>
+    <title>AI News Radar - 伯乐Skill双层信源</title>
+    <owner>Hermes Agent for AIkdb</owner>
+  </head>
+  <body>
+    <!-- ========== Layer 1: 一手权威源（AI模型/产品/研究官方Feed）========== -->
+    <outline text="一手权威源：AI模型与产品">
+      <outline text="OpenAI News" type="rss" xmlUrl="https://openai.com/news/rss.xml" htmlUrl="https://openai.com/news"/>
+      <outline text="OpenAI Blog" type="rss" xmlUrl="https://openai.com/blog/feed" htmlUrl="https://openai.com/blog"/>
+      <outline text="Google DeepMind Blog" type="rss" xmlUrl="https://deepmind.google/blog/rss.xml" htmlUrl="https://deepmind.google/blog"/>
+      <outline text="Google AI Blog" type="rss" xmlUrl="https://blog.google/technology/ai/rss/" htmlUrl="https://blog.google/technology/ai/"/>
+      <outline text="Hugging Face Blog" type="rss" xmlUrl="https://huggingface.co/blog/feed.xml" htmlUrl="https://huggingface.co/blog"/>
+      <outline text="GitHub AI &amp; ML Blog" type="rss" xmlUrl="https://github.blog/ai-and-ml/feed/" htmlUrl="https://github.blog/ai-and-ml/"/>
+      <outline text="GitHub Changelog" type="rss" xmlUrl="https://github.blog/changelog/feed/" htmlUrl="https://github.blog/changelog/"/>
+      <outline text="Microsoft AI Blog" type="rss" xmlUrl="https://blogs.microsoft.com/ai/feed/" htmlUrl="https://blogs.microsoft.com/ai/"/>
+      <outline text="Anthropic News" type="rss" xmlUrl="https://www.anthropic.com/news/rss" htmlUrl="https://www.anthropic.com/news"/>
+      <outline text="Meta AI Blog" type="rss" xmlUrl="https://ai.meta.com/blog/rss/" htmlUrl="https://ai.meta.com/blog/"/>
+      <outline text="NVIDIA AI Blog" type="rss" xmlUrl="https://blogs.nvidia.com/blog/category/deep-learning/feed/" htmlUrl="https://blogs.nvidia.com/blog/category/deep-learning/"/>
+      <outline text="Stability AI News" type="rss" xmlUrl="https://stability.ai/news/rss.xml" htmlUrl="https://stability.ai/news/"/>
+      <outline text="Mistral AI News" type="rss" xmlUrl="https://mistral.ai/news/rss/" htmlUrl="https://mistral.ai/news/"/>
+      <outline text="Claude AI Updates" type="rss" xmlUrl="https://www.anthropic.com/api/rss" htmlUrl="https://www.anthropic.com/api"/>
+    </outline>
+
+    <!-- ========== Layer 1: 技术研究源 ========== -->
+    <outline text="一手权威源：技术研究">
+      <outline text="arXiv cs.AI" type="rss" xmlUrl="https://arxiv.org/rss/cs.AI" htmlUrl="https://arxiv.org/list/cs.AI/recent"/>
+      <outline text="arXiv cs.CL" type="rss" xmlUrl="https://arxiv.org/rss/cs.CL" htmlUrl="https://arxiv.org/list/cs.CL/recent"/>
+      <outline text="arXiv cs.LG" type="rss" xmlUrl="https://arxiv.org/rss/cs.LG" htmlUrl="https://arxiv.org/list/cs.LG/recent"/>
+      <outline text="arXiv cs.CV" type="rss" xmlUrl="https://arxiv.org/rss/cs.CV" htmlUrl="https://arxiv.org/list/cs.CV/recent"/>
+      <outline text="MIT Technology Review" type="rss" xmlUrl="https://www.technologyreview.com/feed/" htmlUrl="https://www.technologyreview.com/"/>
+      <outline text="Simon Willison" type="rss" xmlUrl="https://simonwillison.net/atom/everything/" htmlUrl="https://simonwillison.net/"/>
+      <outline text="宝玉 blog" type="rss" xmlUrl="https://baoyu.io/feed.xml" htmlUrl="https://baoyu.io/"/>
+      <outline text="Jim Fan" type="rss" xmlUrl="https://derindemu.run/@jimfan.rss" htmlUrl="https://derindemu.run/@jimfan"/>
+    </outline>
+
+    <!-- ========== Layer 2: 中文聚合广度源 ========== -->
+    <outline text="聚合广度源：中文AI资讯">
+      <outline text="36kr" type="rss" xmlUrl="https://36kr.com/feed" htmlUrl="https://36kr.com"/>
+      <outline text="机器之心" type="rss" xmlUrl="https://jiqizhixin.com/rss" htmlUrl="https://jiqizhixin.com/"/>
+      <outline text="量子位" type="rss" xmlUrl="https://www.qbitai.com/rss" htmlUrl="https://www.qbitai.com/"/>
+      <outline text="AIbase" type="rss" xmlUrl="https://www.aibase.com/zh/rss" htmlUrl="https://www.aibase.com/zh"/>
+      <outline text="砍柴网" type="rss" xmlUrl="https://ikanchai.com/feed" htmlUrl="https://ikanchai.com/"/>
+      <outline text="智能观察者" type="rss" xmlUrl="https://aiobserver.io/feed" htmlUrl="https://aiobserver.io/"/>
+    </outline>
+
+    <!-- ========== Layer 2: 英文聚合广度源 ========== -->
+    <outline text="聚合广度源：英文AI">
+      <outline text="Hacker News" type="rss" xmlUrl="https://hnrss.org/frontpage" htmlUrl="https://news.ycombinator.com/"/>
+      <outline text="Techmeme" type="rss" xmlUrl="https://www.techmeme.com/feed.xml" htmlUrl="https://www.techmeme.com/"/>
+      <outline text="The Verge AI" type="rss" xmlUrl="https://www.theverge.com/ai-artificial-intelligence/rss/index.xml" htmlUrl="https://www.theverge.com/ai-artificial-intelligence/"/>
+      <outline text="Wired AI" type="rss" xmlUrl="https://www.wired.com/feed/tag/ai/latest/rss" htmlUrl="https://www.wired.com/tag/artificial-intelligence/"/>
+      <outline text="VentureBeat AI" type="rss" xmlUrl="https://venturebeat.com/ai/feed/" htmlUrl="https://venturebeat.com/category/ai/"/>
+      <outline text="Ars Technica AI" type="rss" xmlUrl="https://feeds.arstechnica.com/arstechnica/technology-lab" htmlUrl="https://arstechnica.com/"/>
+    </outline>
+  </body>
+</opml>
